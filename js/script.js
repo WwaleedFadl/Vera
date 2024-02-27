@@ -28,3 +28,23 @@ function userScroll() {
   });
 }
 userScroll();
+//  Video Modal 
+const videoBtn = document.querySelector('.videoBtn');
+const videoModal = document.querySelector('#videoModal');
+const video = document.querySelector('#video');
+let videoSrc ;
+
+if(vid !== null){
+  videoBtn.addEventListener('click',()=>{
+    videoSrc = videoBtn.getAttribute('data-bs-src');
+  })
+}
+if(videoModal !== null){
+  videoModal.addEventListener('shown.bs.modal',()=>{
+    video.setAttribute
+    ('src',videoSrc+'?autoplay=1;modestbranding=1;showInfo=0');
+  });
+  videoModal.addEventListener('hide.bs.modal',()=>{
+    video.setAttribute('src',videoSrc);
+  });
+};
